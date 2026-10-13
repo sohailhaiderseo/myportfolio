@@ -108,3 +108,13 @@ dl{margin-bottom:22px}dt{font-size:12px;font-weight:600;text-transform:uppercase
  .nclose{display:grid;place-items:center;position:absolute;top:14px;right:16px;width:46px;height:46px;border:0;border-radius:50%;background:var(--lime);color:var(--dk);font-size:20px;font-weight:700;cursor:pointer}
  body.nav-open{overflow:hidden}
 }
+/* ===== FIX v26: desktop X button hide + mobile hero photo ===== */
+.tb nav .nclose{display:none!important}
+@media(max-width:900px){
+  .tb nav.open .nclose{display:grid!important}
+  .hero{display:flex;flex-direction:column}
+  .hero .wrap{order:1}
+  .hero .ph{display:block!important;order:2;position:relative;right:auto;top:auto;bottom:auto;width:calc(100% - 32px);max-width:420px;height:auto;aspect-ratio:3/4;opacity:1!important;margin:36px auto 0;border-radius:24px;overflow:hidden;z-index:2;box-shadow:0 24px 50px -24px rgba(0,0,0,.6)}
+  .hero .ph:after{display:none}
+  .hero .ph img{object-position:50% 15%}
+}
